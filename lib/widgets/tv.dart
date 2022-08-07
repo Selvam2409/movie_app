@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/utils/stext.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_app/widgets/desc.dart';
 
 class TV extends StatelessWidget {
@@ -13,10 +13,7 @@ class TV extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Stext(
-            text: 'Popular TV Shows',
-            size: 25,
-          ),
+          Text('Popular TV Shows',style: GoogleFonts.breeSerif(fontSize:25),),
           const SizedBox(
             height: 20,
           ),
@@ -58,12 +55,10 @@ class TV extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 8,),
-                            Stext(
-                              text: tv[index]['original_name'] != null
+                            Text(tv[index]['original_name'] != null
                                   ? tv[index]['original_name']
-                                  : 'Loading',
-                              size: 15,
-                            )
+                                  : 'Loading',style: GoogleFonts.breeSerif(fontSize: 15),
+                              )
                           ]),
                         ),
                       ):Container(),
