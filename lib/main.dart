@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/utils/stext.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_app/widgets/toprated.dart';
 import 'package:movie_app/widgets/trending.dart';
 import 'package:movie_app/widgets/tv.dart';
@@ -65,7 +65,7 @@ class _HomepageState extends State<Homepage> {
           elevation: 0,
           centerTitle: true,
           backgroundColor: Colors.transparent,
-          title: const Stext(text: 'Movie App', size: 30)),
+          title: Text('Movie App', style: GoogleFonts.breeSerif(fontSize: 25))),
       body: ListView(
         children: [
           TV(tv: tv),
