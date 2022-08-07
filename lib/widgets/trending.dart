@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/utils/stext.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_app/widgets/desc.dart';
 
 class TrendingMovies extends StatelessWidget {
@@ -13,9 +13,9 @@ class TrendingMovies extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Stext(
-            text: 'Trending Movies',
-            size: 25,
+          Text(
+            'Trending Movies',
+            style: GoogleFonts.breeSerif(fontSize: 25),
           ),
           const SizedBox(
             height: 20,
@@ -62,12 +62,9 @@ class TrendingMovies extends StatelessWidget {
                                   const SizedBox(
                                     height: 8,
                                   ),
-                                  Stext(
-                                    text: trending[index]['title'] != null
+                                  Text(trending[index]['title'] != null
                                         ? trending[index]['title']
-                                        : 'Loading',
-                                    size: 15,
-                                  ),
+                                        : 'Loading',style: GoogleFonts.breeSerif(fontSize:15),),
                                 ]),
                               ),
                             )
